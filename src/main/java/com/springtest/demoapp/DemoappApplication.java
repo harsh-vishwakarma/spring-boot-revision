@@ -79,8 +79,8 @@ public class DemoappApplication {
 
 		/*--------------------------------------------------------- */
 
-		// List<Employee> employees = employeeRepository.getEmployees();
-		// System.out.println(employees);
+		List<Employee> employees = employeeRepository.getEmployees();
+		System.out.println(employees);
 	}
 
 }
