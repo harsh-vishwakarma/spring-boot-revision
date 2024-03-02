@@ -1,6 +1,5 @@
 package com.springtest.demoapp.controller;
 
-import java.util.List;
 import java.util.Optional;
 
 
@@ -19,8 +18,6 @@ import com.springtest.demoapp.dao.EmployeRepositoryM;
 import com.springtest.demoapp.dao.EmployeeRepository;
 import com.springtest.demoapp.entities.Employee;
 import com.springtest.demoapp.entities.EmployeeMongo;
-
-import jakarta.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/employee")
