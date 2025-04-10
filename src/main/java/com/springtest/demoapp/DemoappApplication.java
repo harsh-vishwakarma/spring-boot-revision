@@ -1,15 +1,15 @@
 package com.springtest.demoapp;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
+// import java.util.Iterator;
+// import java.util.List;
+// import java.util.Optional;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.springtest.demoapp.dao.EmployeeRepository;
-import com.springtest.demoapp.entities.Employee;
+// import com.springtest.demoapp.entities.Employee;
 
 @SpringBootApplication
 public class DemoappApplication {

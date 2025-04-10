@@ -1,9 +1,9 @@
-package com.springtest.demoapp.dao;
+// package com.springtest.demoapp.dao;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+// import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.springtest.demoapp.entities.EmployeeMongo;
+// import com.springtest.demoapp.entities.EmployeeMongo;
 
-public interface EmployeRepositoryM extends MongoRepository<EmployeeMongo, Integer> {
+// public interface EmployeRepositoryM extends MongoRepository<EmployeeMongo, Integer> {
     
-}
+// }
