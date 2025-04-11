@@ -17,6 +17,14 @@ public class Employee {
     
     private String status;
 
+    private String password;
+
+    private String email;
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public Employee(int id, String name, String city, String status) {
         super();
         this.id = id;
@@ -61,8 +69,20 @@ public class Employee {
         this.status = status;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
     @Override
     public String toString() {
         return "Employee [id=" + id + ", name=" + name + ", city=" + city + ", status=" + status + "]";
-    }   
+    }
 }
