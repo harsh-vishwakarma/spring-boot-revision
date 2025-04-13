@@ -24,4 +24,6 @@ public interface EmployeeRepository extends CrudRepository<Employee, Integer>{
 
     @Query(value = "select * from Employee", nativeQuery = true) 
     public List<Employee> getEmployees();
+
+    public Employee findByEmail(String email);
 }
