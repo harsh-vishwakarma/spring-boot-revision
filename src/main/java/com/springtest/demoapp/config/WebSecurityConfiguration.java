@@ -7,7 +7,8 @@ import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 import com.springtest.demoapp.services.EmployeeUserServiceImpl;
@@ -22,14 +23,18 @@ public class WebSecurityConfiguration {
     return new EmployeeUserServiceImpl();
   }
 
-  @SuppressWarnings("deprecation")
   @Bean
   public AuthenticationProvider authenticationProvider() {
     DaoAuthenticationProvider provider= new DaoAuthenticationProvider();
-    provider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
+    provider.setPasswordEncoder(passwordEncoder());
     provider.setUserDetailsService(userDetailsService());
     return provider;
   }
+
+  @Bean
+	public PasswordEncoder passwordEncoder() {
+		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+	}
 
   @Bean
   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {

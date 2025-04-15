@@ -19,8 +19,10 @@ public class EmployeeUserServiceImpl implements UserDetailsService{
   @Override
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
     Employee employee = employeeRepository.findByEmail(username);
+    @SuppressWarnings("deprecation")
     UserDetails user = 
-      User.withUsername(employee.getEmail())
+    User.withDefaultPasswordEncoder()
+          .username(employee.getEmail())
           .password(employee.getPassword())
           .build();
     return user;
